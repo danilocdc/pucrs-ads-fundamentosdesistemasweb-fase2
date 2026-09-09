@@ -1,23 +1,28 @@
-# Taverna do Bicho - Pet Shop - Arquivo de Ajuda (Fase 1)
+# Taverna do Bicho - Pet Shop - Arquivo de Ajuda (Fase 2)
 
 ## Sobre o projeto
 
-Site estático em HTML5 puro (sem CSS ou JavaScript, conforme exigido na Fase 1) para um petshop fictício,  desenvolvido para a disciplina de Fundamentos de Sistemas Web - PUCRS.
+Site para um petshop fictício, desenvolvido para a disciplina de Fundamentos de Sistemas Web - PUCRS. Na Fase 1 foi construído em HTML5 puro; na Fase 2 foram adicionados CSS/Bootstrap, JavaScript, formulários e um recurso de acessibilidade.
 
 ## Páginas e funcionalidades
 
-- **index.html** - Página inicial. Apresenta o petshop e traz links de acesso rápido para as demais páginas.
-- **produtos.html** - Lista os produtos do petshop, divididos em 3 categorias: Ração, Higiene e Limpeza e Acessórios e Brinquedos, com 2 produtos por categoria. Cada produto possui nome, foto, descrição e valor.
-- **servicos.html** - Lista os serviços oferecidos (banho com ou sem tele-busca), com descrição, indicação de tele-busca e valor.
+- **index.html** - Página inicial. Apresenta o petshop, exibe uma saudação dinâmica (bom dia/boa tarde/boa noite conforme o horário) e um carrossel clicável de produtos e serviços que leva às páginas correspondentes.
+- **produtos.html** - Lista os produtos do petshop, divididos em 3 categorias: Ração, Higiene e Limpeza e Acessórios e Brinquedos, exibidos lado a lado.
+- **servicos.html** - Lista os serviços oferecidos (banho com ou sem tele-busca) e traz o formulário de **Agendamento de Serviços** (tipo de serviço, tele-busca/entrega e data/horário), com validação de horário comercial.
+- **cadastro.html** - Formulário de cadastro do pet e do tutor (nome, tipo de pet, data de nascimento, e-mail, telefone, etc.)
 - **sobre.html** - Informações da história do petshop.
-- **contato.html** - Informações de contato do petshop (telefone, WhatsApp, e-mail e endereço) e Horário de Funcionamento.
+- **contato.html** - Informações de contato, horário de funcionamento e um formulário alternativo de mensagem.
 
 ## Navegação
 
 Todas as páginas têm cabeçalho (com nome e slogan do petshop e menu de navegação) e rodapé (com informações legais, autoria e o mesmo menu de navegação), permitindo navegar entre as páginas com um clique.
 
+## Acessibilidade
+
+Todas as imagens do site possuem descrição, e os campos dos formulários usam `label` associado ao `id` do campo correspondente, permitindo que leitores de tela identifiquem corretamente cada campo.
+
 ## Tecnologias utilizadas
-HTML5 apenas, sem CSS ou JavaScript, conforme os requisitos da Fase 1 do projeto.
+HTML5, CSS, Bootstrap e JavaScript.
 
 ## Autoria
 Danilo Costa
