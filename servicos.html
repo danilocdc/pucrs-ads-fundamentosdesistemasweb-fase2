@@ -4,17 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taverna do Bicho - Serviços</title>
+
+    <!-- Adicionando o link para o CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    
+    <!-- Adicionando o link para o CSS personalizado -->
+    <link href="estilos.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1><img src="images/logo.png" alt="logo da taverna do bicho" width="60" height="60"> Taverna do Bicho</h1>
         <p>Poções de banho, as melhores rações e os brinquedos mais populares do reino!</p>
-        <nav>
-            <a href="index.html">Home</a> | 
-            <a href="produtos.html">Produtos</a> | 
-            <a href="servicos.html">Serviços</a> | 
-            <a href="sobre.html">Sobre</a> | 
-            <a href="contato.html">Contato</a>
+        <nav class="container-fluid">
+            <div class="row">
+                <div class="col text-center">
+                    <a href="index.html" class="btn btn-primary botao-nav">Home</a>
+                </div>
+                <div class="col text-center">
+                    <a href="produtos.html" class="btn btn-primary botao-nav">Produtos</a>
+                </div>
+                <div class="col text-center">
+                    <a href="servicos.html" class="btn btn-primary botao-nav">Serviços</a>
+                </div>
+                <div class="col text-center">
+                    <a href="cadastro.html" class="btn btn-primary botao-nav">Cadastro</a>
+                </div>
+                <div class="col text-center">
+                    <a href="sobre.html" class="btn btn-primary botao-nav">Sobre</a>
+                </div>
+                <div class="col text-center">
+                    <a href="contato.html" class="btn btn-primary botao-nav">Contato</a>
+                </div>
+            </div>
         </nav>
     </header>
     <br><hr><br>
@@ -23,21 +44,68 @@
         <p>Confira nossa seleção de serviços para o seu pet!</p>
         <section>
             <h3>Banho e Tosa</h3>
-            <article>
-                <h4>Banho completo</h4>
-                <img src="images/servicos/banho.png" alt="imagem de banho" width="150" height="150">
-                <p>Limpeza completa do pelo e das orelhas do seu pet. Tosa higiênica opcional.</p>
-                <p>Tele-busca: Não</p>
-                <p>Valor: R$ 49,90</p>
-            </article>
-            <article>
-                <h4>Banho completo (tele-busca)</h4>
-                <img src="images/servicos/banho_telebusca.png" alt="imagem de banho com tele-busca" width="150" height="150">
-                <p>Limpeza completa do pelo e das orelhas do seu pet. Tosa higiênica opcional.<br>
-                Serviço de "leva e traz" com total segurança para o seu pet!</p>
-                <p>Tele-busca: Sim</p>
-                <p>Valor: R$ 59,90</p>
-            </article>
+            <div class="row">
+                <div class="col">
+                    <article>
+                        <h4>Banho completo</h4>
+                        <img src="images/servicos/banho.png" alt="imagem de banho" width="150" height="150">
+                        <p>Limpeza completa do pelo e das orelhas do seu pet. Tosa higiênica opcional.</p>
+                        <p>Tele-busca: Não</p>
+                        <p>Valor: R$ 49,90</p>
+                    </article>
+                </div>
+                <div class="col">
+                    <article>
+                        <h4>Banho completo (tele-busca)</h4>
+                        <img src="images/servicos/banho_telebusca.png" alt="imagem de banho com tele-busca" width="150" height="150">
+                        <p>Limpeza completa do pelo e das orelhas do seu pet. Tosa higiênica opcional.<br>
+                        Serviço de "leva e traz" com total segurança para o seu pet!</p>
+                        <p>Tele-busca: Sim</p>
+                        <p>Valor: R$ 59,90</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <br><hr><br>
+        <section>
+            <h3>Agendamento de Serviços</h3>
+            <form action="https://formsubmit.co/danilo.costa@dontsp.am" method="POST" onsubmit="return valida_horario_agendamento()">
+                <fieldset>
+                    <legend>Agendamento do Serviço</legend>
+                    <label for="servico_nome">Nome do pet:</label>
+                    <input type="text" id="servico_nome" name="servico_nome" placeholder="Digite o nome do seu pet" required>
+                    <br><br>
+                    <span>Qual é o seu pet?</span>
+                    <input type="radio" id="servico_tipo_cachorro" name="servico_tipo" value="cachorro" required>
+                    <label for="servico_tipo_cachorro">Cachorro</label>
+                    <input type="radio" id="servico_tipo_gato" name="servico_tipo" value="gato">
+                    <label for="servico_tipo_gato">Gato</label>
+                    <br><br>
+                    <label for="servico_nome_nascimento">Data de nascimento do pet:</label>
+                    <input type="date" id="servico_nome_nascimento" name="servico_nome_nascimento" required>
+                    <br><br>
+                    <span>Qual serviço deseja agendar?</span>
+                    <input type="radio" id="servico_agendado_banho" name="servico_agendado" value="banho" required>
+                    <label for="servico_agendado_banho">Banho</label>
+                    <input type="radio" id="servico_agendado_tosa" name="servico_agendado" value="tosa">
+                    <label for="servico_agendado_tosa">Tosa</label>
+                    <input type="radio" id="servico_agendado_banho_tosa" name="servico_agendado" value="banho_tosa">
+                    <label for="servico_agendado_banho_tosa">Banho e Tosa</label>
+                    <br><br>
+                    <span>Como prefere receber o serviço?</span>
+                    <input type="radio" id="servico_busca_telebusca" name="servico_busca" value="telebusca" required>
+                    <label for="servico_busca_telebusca">Tele-busca</label>
+                    <input type="radio" id="servico_busca_entrega" name="servico_busca" value="entrega" required>
+                    <label for="servico_busca_entrega">Entrega no local</label>
+                    <br><br>
+                    <label for="servico_data">Data e horário desejados:</label>
+                    <input type="datetime-local" id="servico_data" name="agendamento" required>
+                </fieldset>
+                <br>
+                <center>
+                    <input type="submit" value="Agendar">
+                </center>
+            </form>
         </section>
     </main>
     <br><hr><br>
@@ -45,13 +113,32 @@
         <p>&copy; 2026 Taverna do Bicho. Todos os direitos reservados.</p>
         <p>Projeto acadêmico desenvolvido para a disciplina de Fundamentos de Sistemas Web - PUCRS.<br>
         Autoria: <a href="https://github.com/danilocdc">Danilo Costa</a></p>
-        <nav>
-            <a href="index.html">Home</a> | 
-            <a href="produtos.html">Produtos</a> | 
-            <a href="servicos.html">Serviços</a> | 
-            <a href="sobre.html">Sobre</a> | 
-            <a href="contato.html">Contato</a>
+        <!-- Nota para o futuro: Fixar o header, remover este nav do footer -->
+        <nav class="container-fluid">
+            <div class="row">
+                <div class="col text-center">
+                    <a href="index.html" class="btn btn-primary botao-nav">Home</a>
+                </div>
+                <div class="col text-center">
+                    <a href="produtos.html" class="btn btn-primary botao-nav">Produtos</a>
+                </div>
+                <div class="col text-center">
+                    <a href="servicos.html" class="btn btn-primary botao-nav">Serviços</a>
+                </div>
+                <div class="col text-center">
+                    <a href="cadastro.html" class="btn btn-primary botao-nav">Cadastro</a>
+                </div>
+                <div class="col text-center">
+                    <a href="sobre.html" class="btn btn-primary botao-nav">Sobre</a>
+                </div>
+                <div class="col text-center">
+                    <a href="contato.html" class="btn btn-primary botao-nav">Contato</a>
+                </div>
+            </div>
         </nav>
     </footer>
+
+    <!-- Adicionando o script de validação do agendamento -->
+    <script src="scripts/agendamento.js"></script>
 </body>
 </html>

@@ -4,41 +4,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taverna do Bicho</title>
+    
+    <!-- Adicionando o link para o CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    
+    <!-- Adicionando o link para o CSS personalizado -->
+    <link href="estilos.css" rel="stylesheet">
 </head>
 <body>
     <header>
+        <!-- To-do: Retirar header e footer de todas as páginas e usar algum script para incluí-los -->
         <h1><img src="images/logo.png" alt="logo da taverna do bicho" width="60" height="60"> Taverna do Bicho</h1>
         <p>Poções de banho, as melhores rações e os brinquedos mais populares do reino!</p>
-        <nav>
-            <a href="index.html">Home</a> | 
-            <a href="produtos.html">Produtos</a> | 
-            <a href="servicos.html">Serviços</a> | 
-            <a href="sobre.html">Sobre</a> | 
-            <a href="contato.html">Contato</a>
+        <nav class="container-fluid">
+            <div class="row">
+                <div class="col text-center">
+                    <a href="index.html" class="btn btn-primary botao-nav">Home</a>
+                </div>
+                <div class="col text-center">
+                    <a href="produtos.html" class="btn btn-primary botao-nav">Produtos</a>
+                </div>
+                <div class="col text-center">
+                    <a href="servicos.html" class="btn btn-primary botao-nav">Serviços</a>
+                </div>
+                <div class="col text-center">
+                    <a href="cadastro.html" class="btn btn-primary botao-nav">Cadastro</a>
+                </div>
+                <div class="col text-center">
+                    <a href="sobre.html" class="btn btn-primary botao-nav">Sobre</a>
+                </div>
+                <div class="col text-center">
+                    <a href="contato.html" class="btn btn-primary botao-nav">Contato</a>
+                </div>
+            </div>
         </nav>
     </header>
     <br><hr><br>
     <main>
         <h2>Boas vindas!</h2>
-        <p>Bem-vindo à Taverna do Bicho, o lugar perfeito para o seu pet se sentir em casa!</p>
+        <p id="saudacao">Bem-vindo à Taverna do Bicho, o lugar perfeito para o seu pet se sentir em casa!</p>
         <ul>
             <li><img src="images/banho.png" alt="ícone de banho" width="20" height="20"> Serviços de banho e cuidados especiais</li>
             <li><img src="images/racao.png" alt="ícone de ração" width="20" height="20"> Ração e petiscos deliciosos e saudáveis</li>
             <li><img src="images/brinquedo.png" alt="ícone de brinquedo" width="20" height="20"> Brinquedos divertidos e seguros... E duráveis!</li>
         </ul>
+
+        <div id="carousel" class="imagem carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="produtos.html">
+                        <img src="images/produtos/racao_caes.png" class="d-block w-100" alt="ração para cães">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="produtos.html">
+                        <img src="images/produtos/racao_gatos.png" class="d-block w-100" alt="ração para gatos">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="produtos.html">
+                        <img src="images/produtos/shampoo.png" class="d-block w-100" alt="shampoo para pets">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="produtos.html">
+                        <img src="images/produtos/lencos_umedecidos.png" class="d-block w-100" alt="lenços umedecidos para pets">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="produtos.html">
+                        <img src="images/produtos/brinquedos_caes.png" class="d-block w-100" alt="brinquedo para cães">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="produtos.html">
+                        <img src="images/produtos/brinquedos_gatos.png" class="d-block w-100" alt="brinquedo para gatos">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="servicos.html">
+                        <img src="images/servicos/banho.png" class="d-block w-100" alt="banho especial">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="servicos.html">
+                        <img src="images/servicos/banho_telebusca.png" class="d-block w-100" alt="banho com telebusca">
+                    </a>
+                </div>
+            </div>
+            <a href="#carousel" role="button" class="carousel-control-prev" type="button" data-target="#carousel" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a href="#carousel" role="button" class="carousel-control-next" type="button" data-target="#carousel" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
     </main>
     <br><hr><br>
     <footer>
         <p>&copy; 2026 Taverna do Bicho. Todos os direitos reservados.</p>
         <p>Projeto acadêmico desenvolvido para a disciplina de Fundamentos de Sistemas Web - PUCRS.<br>
         Autoria: <a href="https://github.com/danilocdc">Danilo Costa</a></p>
-        <nav>
-            <a href="index.html">Home</a> | 
-            <a href="produtos.html">Produtos</a> | 
-            <a href="servicos.html">Serviços</a> | 
-            <a href="sobre.html">Sobre</a> | 
-            <a href="contato.html">Contato</a>
+        <!-- To-do: Fixar o header, remover este nav do footer -->
+        <nav class="container-fluid">
+            <div class="row">
+                <div class="col text-center">
+                    <a href="index.html" class="btn btn-primary botao-nav">Home</a>
+                </div>
+                <div class="col text-center">
+                    <a href="produtos.html" class="btn btn-primary botao-nav">Produtos</a>
+                </div>
+                <div class="col text-center">
+                    <a href="servicos.html" class="btn btn-primary botao-nav">Serviços</a>
+                </div>
+                <div class="col text-center">
+                    <a href="cadastro.html" class="btn btn-primary botao-nav">Cadastro</a>
+                </div>
+                <div class="col text-center">
+                    <a href="sobre.html" class="btn btn-primary botao-nav">Sobre</a>
+                </div>
+                <div class="col text-center">
+                    <a href="contato.html" class="btn btn-primary botao-nav">Contato</a>
+                </div>
+            </div>
         </nav>
     </footer>
+
+    <!-- Adicionando o script do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Adicionando o script personalizado -->
+    <script src="scripts/saudacao.js"></script>
 </body>
 </html>

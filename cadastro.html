@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taverna do Bicho - Contato</title>
+    <title>Taverna do Bicho - Cadastro</title>
 
     <!-- Adicionando o link para o CSS do Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    
+
     <!-- Adicionando o link para o CSS personalizado -->
     <link href="estilos.css" rel="stylesheet">
 </head>
@@ -40,49 +40,50 @@
     </header>
     <br><hr><br>
     <main>
-        <section>
-            <h2>Horário de Funcionamento</h2>
-            <p>Segunda a sexta: 9h às 19h</p>
-            <p>Sábado: 9h às 13h</p>
-        </section>
-        <br><hr><br>
-        <section>
-            <h2>Contato</h2>
-            <p>Ficou com alguma dúvida sobre nossos produtos ou serviços? Fale Conosco!</p>
-            <ul>
-                <li>Telefone: (51) 1234-5678</li>
-                <li>WhatsApp: (51) 98765-4321</li>
-                <li>E-mail: <a href="mailto:contato@tavernadobicho.com.br">contato@tavernadobicho.com.br</a></li>
-                <li>Endereço: Rua dos Bichos, 123 - Porto Alegre/RS</li>
-            </ul>
-            <p>Ou mande uma mensagem pelo formulário:</p>
-            <form action="https://formsubmit.co/danilo.costa@dontsp.am" method="POST">
-                <label for="contato_nome">Nome:</label>
-                <input type="text" id="contato_nome" name="nome" placeholder="Digite seu nome" required>
+        <h2>Cadastro do Pet</h2>
+        <p>Preencha os dados abaixo para cadastrar seu pet e seu(sua) tutor(a) na Taverna do Bicho!</p>
+
+        <form action="https://formsubmit.co/danilo.costa@dontsp.am" method="POST">
+            <fieldset>
+                <legend>Dados do Pet</legend>
+                <label for="pet_nome">Nome do pet:</label>
+                <input type="text" id="pet_nome" name="pet_nome" placeholder="Digite o nome do seu pet" required>
                 <br><br>
-                <label for="contato_telefone">Telefone:</label>
-                <input type="tel" id="contato_telefone" name="telefone" placeholder="(00) 00000-0000" pattern="[0-9]{10,11}" required>
+                <span>Qual é o seu pet?</span>
+                <input type="radio" id="pet_tipo_cachorro" name="pet_tipo" value="cachorro" required>
+                <label for="pet_tipo_cachorro">Cachorro</label>
+                <input type="radio" id="pet_tipo_gato" name="pet_tipo" value="gato">
+                <label for="pet_tipo_gato">Gato</label>
                 <br><br>
-                <label for="contato_whatsapp">WhatsApp:</label>
-                <input type="tel" id="contato_whatsapp" name="whatsapp" placeholder="(00) 00000-0000" pattern="[0-9]{10,11}">
+                <label for="pet_nascimento">Data de nascimento do pet:</label>
+                <input type="date" id="pet_nascimento" name="pet_nascimento" required>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Dados do Tutor</legend>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
                 <br><br>
-                <label for="contato_email">E-mail:</label>
-                <input type="email" id="contato_email" name="email" placeholder="Digite seu e-mail">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
                 <br><br>
-                <label for="contato_mensagem">Mensagem:</label>
-                <br>
-                <textarea id="contato_mensagem" name="mensagem" cols="50" rows="5" required></textarea>
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" pattern="[0-9]{10,11}" required>
                 <br><br>
-                <input type="submit" value="Enviar mensagem">
-            </form>
-        </section>
+                <label for="nascimento">Data de nascimento:</label>
+                <input type="date" id="nascimento" name="nascimento" required>
+            </fieldset>
+            <br>
+            <center>
+                <input type="submit" value="Enviar cadastro">
+            </center>
+        </form>
     </main>
     <br><hr><br>
     <footer>
         <p>&copy; 2026 Taverna do Bicho. Todos os direitos reservados.</p>
         <p>Projeto acadêmico desenvolvido para a disciplina de Fundamentos de Sistemas Web - PUCRS.<br>
         Autoria: <a href="https://github.com/danilocdc">Danilo Costa</a></p>
-        <!-- Nota para o futuro: Fixar o header, remover este nav do footer -->
         <nav class="container-fluid">
             <div class="row">
                 <div class="col text-center">
